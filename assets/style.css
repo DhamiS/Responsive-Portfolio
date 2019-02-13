@@ -1,0 +1,261 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+}
+
+body {
+    background: red;
+}
+
+.page-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    margin: 0 !important;
+}
+
+/* Navbar Section */
+.navbar {
+    position: static;
+    background: black !important;
+}
+
+.util-flex {
+    flex: 1 0 auto;
+}
+
+.nav-link,
+.navbar-brand {
+    color: white !important;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+    color: yellow !important;
+}
+
+.navbar-toggler {
+    background: white !important;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+/* HeroBanner */
+.hero-banner {
+    background-image: linear-gradient(to bottom, black, red);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fade-in {
+    animation: fade 1s ease-in;
+}
+
+.hero-banner__title {
+    color: white;
+    font-weight: bold !important;
+}
+
+/* Page Columns */
+.content-blocks {
+    /* margin-bottom: 2.5rem; */
+}
+
+.content-block {
+    background: red;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+/* .content-block-image {
+    background: yellow;
+} */
+
+.content-block h2,
+p {
+    color: white;
+}
+
+.content-image:hover {
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(230, 230, 99, 1);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(230, 230, 99, 1);
+    box-shadow: 0px 0px 5px 5px rgba(230, 230, 99, 1);
+}
+
+.skill-icons img {
+    height: 100px;
+    width: 100px;
+    transition: 0.5s ease-in-out;
+}
+
+.skill-icons img:hover {
+    transform: scaleX(1.5) scaleY(1.5)
+}
+
+
+
+.skill-icons img:not(:last-of-type) {
+    margin-right: 0.5rem;
+}
+
+ul {
+    list-style-type: circle;
+    margin: 0;
+    padding: 0;
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+ul li {
+    color: white;
+}
+
+li:hover {
+    transform: scaleY(1.25);
+    color: yellow;
+}
+
+.footer {
+    flex-shrink: 0;
+    background: black;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    color: lightgray;
+}
+
+/* Portfolio*/
+.portfolio-title,
+.contact-title {
+    color: white;
+    border-bottom: 5px solid black;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    animation: fade 1s ease-in;
+
+}
+
+.portfolio {}
+
+
+.portfolio--item {
+    margin: 0.2rem;
+    width: 200px;
+    transition: 0.2s ease-in;
+
+}
+
+.portfolio--item:hover {
+    -webkit-box-shadow: 0px 0px 5px 2.5px rgba(230, 230, 99, 1);
+    -moz-box-shadow: 0px 0px 5px 2.5px rgba(230, 230, 99, 1);
+    box-shadow: 0px 0px 5px 2.5px rgba(230, 230, 99, 1);
+}
+
+.portfolio--item--header {
+    background: black;
+    animation: fade 1s ease-in;
+}
+
+
+.card-body {
+    background: black;
+    color: white;
+}
+
+
+.contact-mail-img img {
+    height: 250px;
+}
+
+.util-h-100 {
+    height: 100% !important;
+}
+
+/* Contact */
+label {
+    color: white;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    body {
+        height: auto;
+    }
+
+    /* .navbar {
+        flex: 1 0 auto;
+    } */
+    .portfolio--item {
+        width: 100%;
+    }
+
+    .portfolio--item:not(:last-of-type) {
+        margin-bottom: 1rem;
+    }
+
+
+    .content-image:hover {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 640px) {
+    body {
+        height: auto;
+     }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 980px) {
+    .hero-banner h1{
+        font-size: 4rem;
+    }
+
+    .hero-banner p {
+        font-size: 2rem;
+    }
+
+    .copyright {
+        color: yellow;    
+    }
+
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .contact-title, .portfolio-title {
+        font-size: 4rem;
+    }
+}
